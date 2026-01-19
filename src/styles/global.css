@@ -106,7 +106,10 @@ a:hover { text-decoration: underline; }
 .nav-links a {
   color: var(--text);
   font-weight: 700;
-  text-transform: none; /* change to uppercase if you want */
+  text-transform: uppercase; /* change to uppercase if you want */
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-links a:hover,
@@ -121,7 +124,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
 
 
 .site-header {
-  border-bottom: 1px solid rgba(167, 139, 250, 0.35); /* soft purple */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.35); /* soft purple */
 }
 
 /* Add to your existing CSS file */
@@ -131,7 +134,7 @@ hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: 1rem;
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
   transition: all 0.3s ease;
   cursor: pointer;
@@ -141,6 +144,12 @@ hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.12);
   border-color: var(--accent);
+}
+
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 /* Avatar Styles */
@@ -171,4 +180,14 @@ hr { border: none; border-top: 1px solid var(--border); margin: 2rem 0; }
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+}
+
+.site-title {
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  margin: 1rem;
+}
+.site-title:hover {
+  color: var(--accent);
 }
