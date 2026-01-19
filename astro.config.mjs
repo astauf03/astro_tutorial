@@ -8,7 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astauf03.github.io",
-  base: "/sound-journal-26",
+  base: import.meta.env.PROD ? "/sound-journal-26" : "/",
   integrations: [preact()],
 
   vite: {
