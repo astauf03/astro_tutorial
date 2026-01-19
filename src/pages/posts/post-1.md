@@ -7,7 +7,7 @@ author: 'astauf'
 image:
     url: 'https://docs.astro.build/assets/rose.webp'
     alt: 'The Astro logo on a dark background with a pink glow.'
-tags: ['astro', 'blog', 'first-post']
+tags: ['astro', 'blogging', 'first-post']
 ---
 
 Welcome to my _new blog_ powered by Astro! This is my first post, and I'm excited to try something new.
