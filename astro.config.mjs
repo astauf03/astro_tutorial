@@ -6,5 +6,5 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   site: "https://astauf03.github.io/",
-  base: "/tutorial"
+  base: "/sound-journal-26"
 });
