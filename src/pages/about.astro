@@ -4,9 +4,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "About Me";
 
 const identity = {
-  name: "astauf",
+  name: "Alexandra Stauffer",
   role: "MUSA Student",
-  location: "U.S. East Coast",
+  location: "Weitzman School of Design, at the University of Pennsylvania",
   hobbies: ["singing", "language learning 你好", "playing card games", "petting cats"]
 };
 
@@ -20,7 +20,7 @@ const skills = [
 ];
 
 const happy = true;
-const finished = false;
+const finished = true;
 const goal = 3;
 
 const skillColor = "red";
@@ -32,17 +32,15 @@ const textCase = "uppercase";
   <h2>... and my new Astro site!</h2>
 
   <p>
-    I am working through Astro's introductory tutorial. This is the second page on my website,
-    and it's the first one I built myself (I kind of copy-pasted mostly).
+    I am an urban spatial analytics student who followed the Astro blog tutorial to create this site for a class project.
   </p>
 
-  <p>This site will update as I complete more of the tutorial!</p>
 
-  <p>Here is a little about me:</p>
+  <h2>Here is a little about me:</h2>
   <ul>
     <li>My name is {identity.name}.</li>
     <li>I am a {identity.role}.</li>
-    <li>I live in {identity.location}.</li>
+    <li>My school is the {identity.location}.</li>
     {identity.hobbies.length >= 2 && (
       <li>
         Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
@@ -50,7 +48,7 @@ const textCase = "uppercase";
     )}
   </ul>
 
-  <p>Here are some of my skills:</p>
+  <h2>Here are some of my skills:</h2>
   <ul>
     {skills.map((skill) => (
       <li class="skill">{skill}</li>
