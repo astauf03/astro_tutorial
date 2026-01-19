@@ -9,9 +9,13 @@ interface Props {
 }
 
 const { url, title, description, date, tags } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+// Ensure URL properly includes base path
+const fullUrl = url.startsWith('http') ? url : `${base}${url.replace(/^\//, '')}`;
 ---
 
-<a href={url} class="block no-underline">
+<a href={fullUrl} class="block no-underline">
   <article class="blog-card group">
     <div class="flex flex-col gap-3">
       <!-- Date Badge -->
@@ -41,9 +45,12 @@ const { url, title, description, date, tags } = Astro.props;
       {tags && tags.length > 0 && (
         <div class="flex flex-wrap gap-2 mt-2">
           {tags.map(tag => (
-            <span class="px-2 py-1 text-xs font-medium rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300">
+            <a 
+              href={`${base}tags/${tag}/`}
+              class="px-2 py-1 text-xs font-medium rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 hover:bg-orange-200 dark:hover:bg-orange-900/50 transition-colors no-underline"
+            >
               #{tag}
-            </span>
+            </a>
           ))}
         </div>
       )}

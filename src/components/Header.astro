@@ -2,13 +2,13 @@
 import Navigation from "./Navigation.astro";
 import Menu from "./Menu.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+const base = import.meta.env.BASE_URL || '/';
 ---
 <header class="site-header">
   <div class="inner">
     <div class="left">
       <ThemeIcon />
-
-      <a class="site-title" href="/">Sound Journal</a>
+      <a class="site-title" href={base}>Sound Journal</a>
     </div>
 
     <nav class="nav-links" aria-label="Primary">
