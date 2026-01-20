@@ -7,12 +7,15 @@ interface Props {
   date?: string;
   tags?: string[];
 }
-
 const { url, title, description, date, tags } = Astro.props;
-const base = import.meta.env.BASE_URL;
 
-// Ensure URL properly includes base path
-const fullUrl = url.startsWith('http') ? url : `${base}${url.replace(/^\//, '')}`;
+let base = import.meta.env.BASE_URL || "/";
+if (!base.endsWith("/")) base += "/";
+
+// url usually starts with "/posts/..."
+const fullUrl = `${base}${String(url).replace(/^\//, "")}`;
+---
+
 ---
 
 <a href={fullUrl} class="block no-underline">

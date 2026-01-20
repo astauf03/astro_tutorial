@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'My First Blog Post'
+title: 'Sound Journal: My First Post (with Astro)'
 pubDate: 2026-01-15
 description: 'First time user!'
-author: 'astauf'
+author: 'Alex'
 image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
+    url: 'https://travellemming.com/perspectives/i-spent-a-weekend-with-the-amish-in-lancaster-pennsylvania/?srsltid=AfmBOooN5TbYgsq5UxLnEAi0Zidq_3-5gwcQgm9Uie-nLtiFu1P6ed-m'
+    alt: 'Horse and buggy in Lancaster, PA.'
 tags: ['astro', 'blogging', 'first-post']
 ---
 
