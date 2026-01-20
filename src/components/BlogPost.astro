@@ -9,14 +9,18 @@ interface Props {
 }
 const { url, title, description, date, tags } = Astro.props;
 
-let base = import.meta.env.BASE_URL || "/";
-if (!base.endsWith("/")) base += "/";
+const raw = String(url ?? "");
 
-let href = String(url);
+// normalize base to "/sound-journal-26" (NO trailing slash)
+let base = (import.meta.env.BASE_URL || "/").replace(/\/+$/, "");
 
-// If url is already base-prefixed, don’t add base again
-if (!href.startsWith("http") && !href.startsWith(base)) {
-  href = `${base}${href.replace(/^\//, "")}`;
+// normalize url to start with "/" and have NO trailing slash
+let href = raw.replace(/\/+$/, "");
+if (!href.startsWith("http") && !href.startsWith("/")) href = "/" + href;
+
+// if href already contains base at the start, don't add it again
+if (!href.startsWith("http") && !href.startsWith(base + "/") && href !== base) {
+  href = `${base}${href}`;
 }
 ---
 
