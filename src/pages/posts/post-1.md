@@ -5,15 +5,17 @@ pubDate: 2026-01-15
 description: 'First time user!'
 location: 'Lancaster, PA'
 author: 'Alex'
-image:
-    url: 'https://travellemming.com/wp-content/uploads/Lancaster-County-Horse-and-Buggy.jpg'
-    alt: 'Horse and buggy in Lancaster, PA.'
 tags: ['astro', 'blogging', 'first-post']
 ---
 
 Welcome to my _new blog_ powered by Astro! This is my first post, and I'm excited to try something new.
 
 ## What are the sounds of Lancaster, Pennsylvania? 
+
+<Photo
+    imagePath="/src/assets/covered-bridge.png"
+    altText = "Covered Bridge in Lancaster County, PA"
+/>
 
 It's easier to say "Lancaster" instead of Mount Joy, a small town one Amtrak stop past Lancaster City, or ~ 15-20 minutes by car. 
 
